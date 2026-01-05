@@ -37,7 +37,6 @@ module "security_group" {
 
 module "ec2" {
   source            = "./modules/ec2"
-  ami_id            = var.ami_id
   instance_type     = var.instance_type
   key_name          = var.key_name
   public_subnet_id  = module.subnet.public_subnet_id
